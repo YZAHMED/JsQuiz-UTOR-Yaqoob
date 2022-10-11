@@ -96,4 +96,9 @@ h1{
     outline: 2px solid black;
     outline-offset: 5px;
     border-radius: 5px;
+    text-align: center;
+
+}
+.rules li{
+    list-style-type: none;
 }
