@@ -30,6 +30,7 @@ let innerContainer = document.getElementById("innerContainer")
 let startButton = document.getElementById("startButton")
 let timeLeft = document.getElementById("timeLeft")
 let body = document.getElementById("body");
+let rules = document.getElementById("rules");
 
 let currentQuestion = 0;
 let totalQuestions = Object.keys(questions).length;
@@ -83,10 +84,13 @@ startButton.addEventListener("click", e => {
    
 
 
-    innerContainer.classList.remove('hiddenclass')
+    innerContainer.classList.remove('hiddenclass');
+    rules.classList.add("hiddenclass");
     startButton.innerText = "NEXT"
 
     logicOfQuiz()
+
+    setTimeout(quizOver, 30000);
 
     })
 

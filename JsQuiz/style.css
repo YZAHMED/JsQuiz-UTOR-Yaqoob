@@ -72,6 +72,7 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 50px;
 }
 
 .blue{
@@ -89,4 +90,10 @@ h1{
 .correct{
     background-color: orangered;
     color: black;
+}
+.rules{
+    border: 2px solid red;
+    outline: 2px solid black;
+    outline-offset: 5px;
+    border-radius: 5px;
 }
