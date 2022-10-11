@@ -102,3 +102,7 @@ h1{
 .rules li{
     list-style-type: none;
 }
+
+#inputName{
+    margin-bottom: 10px;
+}

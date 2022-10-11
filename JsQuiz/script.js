@@ -31,6 +31,8 @@ let startButton = document.getElementById("startButton")
 let timeLeft = document.getElementById("timeLeft")
 let body = document.getElementById("body");
 let rules = document.getElementById("rules");
+let gameOver = document.getElementById("gameOver");
+let inputName = document.getElementById("inputName");
 
 let currentQuestion = 0;
 let totalQuestions = Object.keys(questions).length;
@@ -68,11 +70,19 @@ function checkTime(){
 
 function quizOver(){
     innerContainer.classList.add('hiddenclass')
+    
+    gameOver.classList.remove("hiddenclass")
+    localStorage.setItem("initials", `${inputName.value}`)
     showScore()
+
 }
 
 function showScore(){
-    startButton.innerText = `Your Score is ${score}`
+    setTimeout(()=>{
+        startButton.innerText = `Your Score is ${localStorage.getItem("initials")} ${score}`
+
+    },2000)
+    // startButton.innerText = `Your Score is ${localStorage.getItem("initials")} ${score}`
 }
 
 // for (const externalKey of Object.keys(questions)){
