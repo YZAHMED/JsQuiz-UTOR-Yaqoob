@@ -119,3 +119,11 @@ h1{
     justify-content: center;
 }
 
+.centerH2{
+    border: 2px dotted black;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    background-color: orangered;
+    color: whitesmoke;
+}

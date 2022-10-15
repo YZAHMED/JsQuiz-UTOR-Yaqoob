@@ -2,20 +2,45 @@ console.log(`I amloaded`);
 
 const questions = {
     question1 :{
-    question: "What is your name?",
-    choice1: "Irfan",
-    choice2: "Haroon",
-    choice3: "Adnan",
-    choice4: "Wadhah",
-    answer: "Irfan"
+    question: "Inside which HTML element do we put the JavaScript?",
+    choice1: "<script>",
+    choice2: "<javaScript>",
+    choice3: "<scripting>",
+    choice4: "<js>",
+    answer: "<script>"
 }, 
     question2: {
-    question: "What is your age?",
-    choice1: 24,
-    choice2: 36,
-    choice3: 33,
-    choice4: 18,
-    answer: 33
+    question: 'What is the correct JavaScript syntax to change the content of the HTML element below? \n \n <p id="demo">This is a demonstration.</p>',
+    choice1:  '#demo.innerHTML = "Hello World!";',
+    choice2:  'document.getElementByName("p").innerHTML = "Hello World!";',
+    choice3: 'document.getElement("p").innerHTML = "Hello World!";',
+    choice4: 'document.getElementById("demo").innerHTML = "Hello World!";',
+    answer: 'document.getElementById("demo").innerHTML = "Hello World!";'
+}, 
+    question3: {
+    question: 'What is the correct JavaScript syntax to change the content of the HTML element below? \n \n <p id="demo">This is a demonstration.</p>',
+    choice1:  '#demo.innerHTML = "Hello World!";',
+    choice2:  'document.getElementByName("p").innerHTML = "Hello World!";',
+    choice3: 'document.getElement("p").innerHTML = "Hello World!";',
+    choice4: 'document.getElementById("demo").innerHTML = "Hello World!";',
+    answer: 'document.getElementById("demo").innerHTML = "Hello World!";'
+}, 
+    question4: {
+    question: 'What is the correct JavaScript syntax to change the content of the HTML element below? \n \n <p id="demo">This is a demonstration.</p>',
+    choice1:  '#demo.innerHTML = "Hello World!";',
+    choice2:  'document.getElementByName("p").innerHTML = "Hello World!";',
+    choice3: 'document.getElement("p").innerHTML = "Hello World!";',
+    choice4: 'document.getElementById("demo").innerHTML = "Hello World!";',
+    answer: 'document.getElementById("demo").innerHTML = "Hello World!";'
+
+}, 
+    question5: {
+    question: 'What is the correct JavaScript syntax to change the content of the HTML element below? \n \n <p id="demo">This is a demonstration.</p>',
+    choice1:  '#demo.innerHTML = "Hello World!";',
+    choice2:  'document.getElementByName("p").innerHTML = "Hello World!";',
+    choice3: 'document.getElement("p").innerHTML = "Hello World!";',
+    choice4: 'document.getElementById("demo").innerHTML = "Hello World!";',
+    answer: 'document.getElementById("demo").innerHTML = "Hello World!";'
 }
 
 
@@ -75,7 +100,7 @@ function quizOver(){
     
     gameOver.classList.remove("hiddenclass")
     inputNameBtn.addEventListener("click", ()=>{
-        localStorage.setItem("initials", `${inputName.value}`)
+        localStorage.setItem("initials", `${inputName.value}'s score is ${score}`)
         showScore()
     })
     
@@ -84,7 +109,7 @@ function quizOver(){
 
 function showScore(){
     setTimeout(()=>{
-        body.innerHTML = `<h2> ${localStorage.getItem("initials")}'s score is ${score} </h2>`
+        body.innerHTML = `<h2 class="centerH2"> ${localStorage.getItem("initials")} </h2>`
     },0001)
     // startButton.innerText = `Your Score is ${localStorage.getItem("initials")} ${score}`
 }
