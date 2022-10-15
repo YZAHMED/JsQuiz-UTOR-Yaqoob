@@ -18,29 +18,29 @@ const questions = {
     answer: 'document.getElementById("demo").innerHTML = "Hello World!";'
 }, 
     question3: {
-    question: 'What is the correct JavaScript syntax to change the content of the HTML element below? \n \n <p id="demo">This is a demonstration.</p>',
-    choice1:  '#demo.innerHTML = "Hello World!";',
-    choice2:  'document.getElementByName("p").innerHTML = "Hello World!";',
-    choice3: 'document.getElement("p").innerHTML = "Hello World!";',
-    choice4: 'document.getElementById("demo").innerHTML = "Hello World!";',
-    answer: 'document.getElementById("demo").innerHTML = "Hello World!";'
+    question: 'Where is the correct place to insert a JavaScript?',
+    choice1:  'The <body> section',
+    choice2:  'Both the &lt;head&gt; section and the &lt;body&gt; section are correct',
+    choice3: 'The &lt;head&gt; section',
+    choice4: 'The meta section',
+    answer: 'Both the &lt;head&gt; section and the &lt;body&gt; section are correct'
 }, 
     question4: {
-    question: 'What is the correct JavaScript syntax to change the content of the HTML element below? \n \n <p id="demo">This is a demonstration.</p>',
-    choice1:  '#demo.innerHTML = "Hello World!";',
-    choice2:  'document.getElementByName("p").innerHTML = "Hello World!";',
-    choice3: 'document.getElement("p").innerHTML = "Hello World!";',
-    choice4: 'document.getElementById("demo").innerHTML = "Hello World!";',
-    answer: 'document.getElementById("demo").innerHTML = "Hello World!";'
+    question: 'What is the correct syntax for referring to an external script called "xxx.js"?',
+    choice1:  '<script name="xxx.js">',
+    choice2:  '<script href="xxx.js">',
+    choice3: '<script src="xxx.js">',
+    choice4: '<script force="xxx.js">',
+    answer: '<script src="xxx.js">'
 
 }, 
     question5: {
-    question: 'What is the correct JavaScript syntax to change the content of the HTML element below? \n \n <p id="demo">This is a demonstration.</p>',
-    choice1:  '#demo.innerHTML = "Hello World!";',
-    choice2:  'document.getElementByName("p").innerHTML = "Hello World!";',
-    choice3: 'document.getElement("p").innerHTML = "Hello World!";',
-    choice4: 'document.getElementById("demo").innerHTML = "Hello World!";',
-    answer: 'document.getElementById("demo").innerHTML = "Hello World!";'
+    question: 'How do you write "Hello World" in an alert box?',
+    choice1:  'msgBox("Hello World");',
+    choice2:  'alertBox("Hello World");',
+    choice3: 'alert("Hello World");',
+    choice4: 'msg("Hello World");',
+    answer: 'alert("Hello World");'
 }
 
 
