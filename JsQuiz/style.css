@@ -64,7 +64,7 @@ h1{
     justify-content: end;
 }
 
-#startButton{
+#startButton, .showscoreButton{
     font-weight: 600;
     background-color: blueviolet;
     padding: 6px 15px;
@@ -106,3 +106,16 @@ h1{
 #inputName{
     margin-bottom: 10px;
 }
+
+#inputNameBtn{
+    height: 20px;
+    width: 100px;
+
+}
+
+.functionToAlign{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+

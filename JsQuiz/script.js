@@ -33,6 +33,8 @@ let body = document.getElementById("body");
 let rules = document.getElementById("rules");
 let gameOver = document.getElementById("gameOver");
 let inputName = document.getElementById("inputName");
+let inputNameBtn = document.getElementById("inputNameBtn");
+let viewHighScore = document.getElementById("showscoreButton")
 
 let currentQuestion = 0;
 let totalQuestions = Object.keys(questions).length;
@@ -72,30 +74,37 @@ function quizOver(){
     innerContainer.classList.add('hiddenclass')
     
     gameOver.classList.remove("hiddenclass")
-    localStorage.setItem("initials", `${inputName.value}`)
-    showScore()
+    inputNameBtn.addEventListener("click", ()=>{
+        localStorage.setItem("initials", `${inputName.value}`)
+        showScore()
+    })
+    
 
 }
 
 function showScore(){
     setTimeout(()=>{
-        startButton.innerText = `Your Score is ${localStorage.getItem("initials")} ${score}`
-
-    },2000)
+        body.innerHTML = `<h2> ${localStorage.getItem("initials")}'s score is ${score} </h2>`
+    },0001)
     // startButton.innerText = `Your Score is ${localStorage.getItem("initials")} ${score}`
 }
 
+viewHighScore.addEventListener("click", ()=>{
+    showScore()
+})
 // for (const externalKey of Object.keys(questions)){
 startButton.addEventListener("click", e => {
     e.preventDefault()
     timeCounter()
     hiddenClassRemover()
-
+    
    
 
 
     innerContainer.classList.remove('hiddenclass');
     rules.classList.add("hiddenclass");
+    viewHighScore.classList.remove("showscoreButton");
+    viewHighScore.classList.add("hiddenclass");
     startButton.innerText = "NEXT"
 
     logicOfQuiz()
@@ -171,3 +180,4 @@ startButton.addEventListener("click", e => {
     }
 
     checkTime()
+
