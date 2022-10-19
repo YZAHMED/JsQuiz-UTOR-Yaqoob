@@ -87,9 +87,9 @@ function hiddenClassRemover (){
     innerContainer.classList.remove('hiddenclass')
 };
 
-function questionIndexAdder(){
-    questionIndex++
-};
+// function questionIndexAdder(){
+//     questionIndex++
+// };
 
 function checkTime(){
     return seconds <= 1;
@@ -150,8 +150,6 @@ startButton.addEventListener("click", e => {
             let choicesContainer = "";
         
             for (const key of Object.keys(tempObj)){
-                body.classList.remove("wrong")
-                body.classList.remove("correct")
             
         
                 let question = document.getElementById("question");
@@ -166,7 +164,8 @@ startButton.addEventListener("click", e => {
                     choices.textContent =  tempObj[key];
                     indexOfButtons++;
             
-                }}; questionIndex++;
+                }}; 
+                // questionIndex++;
                 let count = 0;
                 function choiceContainerFunc(){
 
@@ -187,21 +186,26 @@ startButton.addEventListener("click", e => {
                             setTimeout(()=>{
 
                             }, 1000)
+                            console.log(questionIndex, "question index")
+                            questionIndex++;
                         
                             logicOfQuiz()
         
                             console.log("score is up", score)
                         } else {
                             seconds -= 10
-                            body.classList.add("wrong")
+
+                            console.log(questionIndex, "question index")
+                            logicOfQuiz()
                         }
-                    }, {once: true});
+                    }
+                    );
                     
                 });
             } else {
                 startButton.innerText = "QUIZ IS OVER"
                 quizOver()
-            }
+            };
     }
 
     checkTime()
