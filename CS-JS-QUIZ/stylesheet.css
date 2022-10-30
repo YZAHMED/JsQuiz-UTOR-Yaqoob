@@ -75,3 +75,11 @@ body{
     width: auto;
     height: auto;
 }
+
+#highscoresdiv{
+    color: black;
+}
+
+#highscoresdiv:hover{
+    cursor: pointer;
+}

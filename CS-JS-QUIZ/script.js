@@ -13,6 +13,8 @@ const falseBtn1 = document.getElementById("false1")
 const userScore = document.getElementById("user-score")
 const questionText = document.getElementById("total-score")
 const time = document.getElementById("time")
+const inputName = document.getElementById("inputValue");
+
 
 
 // Setting up own variables for maintainence
@@ -370,6 +372,11 @@ function next() {
         }
         nextBtn.classList.remove('hide');
     }
+    const viewHighScoreBtn = document.getElementById("highscoreBtn");
+
+    viewHighScoreBtn.addEventListener('click', ()=>{
+        viewHighScoreBtn.textContent = `${localStorage.getItem("initials")}`
+    })
 
     function submit(){
         prevBtn.classList.add('hide')
@@ -380,12 +387,20 @@ function next() {
         falseBtn1.classList.add('hide')
         nextBtn.classList.add('hide')
         questionText.textContent = "The Quiz is Submitted"
+        
+        const initialsdiv = document.getElementById("initialsdiv")
+        initialsdiv.classList.remove("hide")
 
-    }
+        localStorage.setItem("initials", `${inputName.value}'s score is ${userScore.textContent}`)
+        
+        
+
+        }
+
 
 function timeCheck(){
     if (seconds > 61){
         submit()
     }
 }
-``
+console.log(userScore)
